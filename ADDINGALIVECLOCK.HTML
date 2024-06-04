@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    .innerContainer{
+        border: 10px solid brown;
+        width: 60%;
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(164, 93, 93);
+    }
+
+    span {
+        color: black;
+        font-style: italic;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="innerContainer">
+            <h1>The current time is <span id="time"></span></h1>
+        </div>
+    </div>
+
+    <script>
+        currentTime = () => {
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(currentTime, 1000);
+    </script>
+</body>
+
+</html>
